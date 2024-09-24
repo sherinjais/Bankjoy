@@ -47,12 +47,13 @@ class LoginActivity : AppCompatActivity() {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                if (s.isNullOrEmpty()) {
-                    binding.usernameEditText.setTextColor(Color.BLACK)
-                    binding.errorTextView.isErrorEnabled = false
-                    binding.errorTextView.error = null
-                    binding.errorTextView.boxStrokeColor = ContextCompat.getColor(this@LoginActivity, R.color.black)
-                }
+                binding.usernameEditText.setTextColor(Color.BLACK)
+                binding.loginButton.setBackgroundResource(R.drawable.d_rounded_corner)
+
+                binding.errorTextView.isErrorEnabled = false
+                binding.errorTextView.error = null
+                binding.errorTextView.boxStrokeColor = ContextCompat.getColor(this@LoginActivity, R.color.black)
+
             }
 
             override fun afterTextChanged(s: Editable?) {
@@ -63,12 +64,13 @@ class LoginActivity : AppCompatActivity() {
             }
 
             override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {
-                if (s.isNullOrEmpty()) {
-                    binding.passwordEditText.setTextColor(Color.BLACK)
-                    binding.errorTextView.isErrorEnabled = false
-                    binding.errorTextView.error = null
-                    binding.errorTextView.boxStrokeColor = ContextCompat.getColor(this@LoginActivity, R.color.black)
-                }
+                binding.passwordEditText.setTextColor(Color.BLACK)
+                binding.loginButton.setBackgroundResource(R.drawable.d_rounded_corner)
+
+                binding.errorTextView.isErrorEnabled = false
+                binding.errorTextView.error = null
+                binding.errorTextView.boxStrokeColor = ContextCompat.getColor(this@LoginActivity, R.color.black)
+
             }
 
             override fun afterTextChanged(s: Editable?) {
@@ -96,8 +98,10 @@ class LoginActivity : AppCompatActivity() {
 
     private fun updateUI(isValid: Boolean) {
         if (isValid) {
-            binding.usernameEditText.setTextColor(Color.GREEN)
-            binding.passwordEditText.setTextColor(Color.GREEN)
+            binding.usernameEditText.setTextColor(getColor(R.color.green))
+            binding.passwordEditText.setTextColor(getColor(R.color.green))
+            binding.loginButton.setBackgroundResource(R.drawable.v_rounded_corner)
+
         } else {
             binding.errorTextView.error = getString(R.string.hint_error)
             binding.usernameEditText.setTextColor(Color.RED)
