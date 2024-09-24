@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Bankjoy</string>
+    <string name="hint_user">Username</string>
+    <string name="hint_pass">Password</string>
+    <string name="hint_remember">Remember me</string>
+    <string name="hint_help">Help?</string>
+    <string name="hint_conti">Continue</string>
+    <string name="hint_b1">Button 1</string>
+    <string name="hint_b2">Button 2</string>
+    <string name="hint_error">Your username or password is incorrect. Please, try again.</string>
+    <string name="hint_error_chk">Please check the box before proceeding.</string>
+</resources>
